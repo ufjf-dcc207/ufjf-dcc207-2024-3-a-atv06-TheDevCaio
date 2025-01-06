@@ -7,3 +7,19 @@
     flex-direction: column;
 }
 
+
+.emoji{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-left: 50%;
+    
+}
+
+.divPai{
+display: flex;
+align-items: column;
+background: black;
+width: 100vw;
+height: 100vh;
+}
