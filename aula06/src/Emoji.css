@@ -1,0 +1,9 @@
+.face {
+    font-size: 4em;
+}
+
+.acoes{
+    display: flex;
+    flex-direction: column;
+}
+
