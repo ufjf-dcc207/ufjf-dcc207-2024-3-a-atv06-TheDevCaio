@@ -18,6 +18,7 @@
 
 .divPai{
 display: flex;
+
 align-items: column;
 background: black;
 width: 100vw;

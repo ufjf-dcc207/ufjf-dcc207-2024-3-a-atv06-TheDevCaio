@@ -1,44 +1,72 @@
 import { useState } from "react";
 import "./Emoji.css"
 
-const EMOJIS = new Map<string, string>([
-["happy", "😊"],
-["sick", "🤢"],
-["dead", "💀"]
+const LIFE = new Map<number, string>([
+  [0, "💓"],
+  [1, "💓💓"],
+  [2, "💓💓💓"],
+  [3, "💓💓💓💓"]
 ]);
 
 
-export default function Emoji(){
-  
-  const [situacao, setSituacao] = useState("happy");
+const FOOD = new Map<number, string>([
+  [0, "🍲"],
+  [1, "🍲🍲"],
+  [2, "🍲🍲🍲"],
+  [3, "🍲🍲🍲🍲"]
+]);
 
-  function toHappy(){
-    console.log("toHappy()!");
-    setSituacao("happy");
-  }
+const ENERGY = new Map<number, string>([
+  [0, "🔋"],
+  [1, "🔋🔋"],
+  [2, "🔋🔋🔋"],
+  [3, "🔋🔋🔋🔋"]
+]);
 
-  function toDead(){
-    console.log("toDead()!");
-    setSituacao("dead");
-  }
+export default function Emoji() {
 
-  function toSick(){
-    console.log("toSick())!");
-    setSituacao("sick");
-  }
+  const [vida, setVida] = useState(0);
+  const [comida, setComida] = useState(0);
+  const [energia, setEnergia] = useState(0);
 
-
-  return(
-<div className="divPai">
-<div className="emoji">
-    <div className="situacao">{EMOJIS.get(situacao) || "😐"}</div>
-    <div className="acoes">
-        <button onClick={toDead}>Morto</button>
-        <button onClick={toHappy}>Vivo</button>
-        <button onClick={toSick}>Doente</button>
-    </div>
-</div>
-</div>
-  )
-
+  function toDrink() {
+    if (vida < 3){
+      setVida(vida + 1);
     }
+  }
+
+  function toEat() {
+    if (comida < 3){
+    setComida(comida + 1); 
+  }
+  }
+
+  function toHeal() {
+    if (energia < 3){
+      setEnergia(energia + 1);
+    }  
+  }
+
+  return (
+    <div className="divPai">
+      <div className="emoji">
+        
+        <div className="situacao">{LIFE.get(vida)}</div>
+        <div className="acoes">
+          <button onClick={toDrink}>Ganhar energia</button>
+        </div>
+
+        <div className="situacao">{FOOD.get(comida)}</div>
+        <div className="acoes">
+          <button onClick={toEat}>Ganhar comida</button>
+        </div>
+
+        <div className="situacao">{ENERGY.get(energia)}</div>
+        <div className="acoes">
+        <button onClick={toHeal}>Ganhar energia</button>
+        </div>
+        
+      </div>
+    </div>
+  );
+}
