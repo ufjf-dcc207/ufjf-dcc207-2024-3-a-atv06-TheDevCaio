@@ -18,7 +18,7 @@ export default function Atributo({icone }: AtributoProps){
         <div className ="atributo">
             <span className="ativo">{icone.repeat(valor)}</span>
             <span className="inativo">{icone.repeat(5- valor)}</span>
-            <button onClick={onValueUp}>+</button>
+            <button onClick={onValueUp} className="estiloBtn">+</button>
         </div>
     )
 }

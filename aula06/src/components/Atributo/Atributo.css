@@ -1,0 +1,44 @@
+.atributo {
+    display: flex;
+    width: 350px;
+    height: 80px;
+    margin-left: -15%;
+    border-width: 5px;
+    border-style: solid;
+    background: white;
+    border-radius: 50px;
+    
+    border-color: black;
+    justify-content: center;
+    align-items: center;
+    .ativo {
+        scale: 2;
+        padding: 10px;
+ 
+        margin-left: 50px;
+     
+    }
+    .inativo { 
+       
+    
+       
+        scale: 2;
+        filter: grayscale(100%);
+        opacity: 0.4;
+    }
+}
+
+
+.estiloBtn{
+    border-width: 5px;
+    border-style: solid;
+    background: black;
+    border-radius: 50px;
+    font-weight: bold;
+    border-color: black;
+    width: 60px;
+    height: 60px;
+
+    margin-left: 100px;
+    margin-top: 0px;
+}

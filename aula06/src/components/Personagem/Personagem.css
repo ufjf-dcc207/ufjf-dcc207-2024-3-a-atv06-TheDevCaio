@@ -1,0 +1,14 @@
+.boneco {
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+    width: 165px;
+    background-image: url("../../../public/CookieMonsterWaving.webp");
+    background-position: top center;
+    padding: 10vw;
+    margin-left: 7vw;
+    border-radius: 30px;
+    margin-top: 80px;
+    background-color: red;
+    overflow: hidden;
+}

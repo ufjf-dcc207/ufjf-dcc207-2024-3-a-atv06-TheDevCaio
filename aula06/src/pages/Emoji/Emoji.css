@@ -1,0 +1,48 @@
+.face {
+    font-size: 4em;
+}
+
+.acoes{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.container{
+   background: white;
+   border-width: 20px;
+   border-style: solid;
+   border-radius: 33px;
+   display: flex;
+   height: 500px;
+   margin-top: 40px;
+   margin-left: 220px;
+}
+
+
+.emoji{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: column;
+    margin-left: 15%;
+    gap: 100px;
+    
+    .situacao{
+        font-size: 4em;
+    }
+
+    .acoes{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.divPai{
+display: flex;
+
+background: black;
+width: 100vw;
+height: 100vh;
+}

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./Emoji.css"
-
+import Atributo from "../../components/Atributo/Atributo";
+import  "../../components/Personagem/Personagem.css";
 const LIFE = new Map<number, string>([
   [0, "💓"],
   [1, "💓💓"],
@@ -47,25 +48,31 @@ export default function Emoji() {
     }  
   }
 
+  function onCiclo(){
+    setComida(comida -1);
+    setVida(vida -1);
+    setEnergia(energia -1);
+  }
+
   return (
     <div className="divPai">
+      <div className="container">
+      <div className="boneco"></div>
       <div className="emoji">
-        
-        <div className="situacao">{LIFE.get(vida)}</div>
-        <div className="acoes">
-          <button onClick={toDrink}>Ganhar energia</button>
+         
+        <div className="atributos">
+        <Atributo icone="❤️"/>
         </div>
 
-        <div className="situacao">{FOOD.get(comida)}</div>
-        <div className="acoes">
-          <button onClick={toEat}>Ganhar comida</button>
+        <div className="atributos">
+        <Atributo icone="⚡"/>
         </div>
 
-        <div className="situacao">{ENERGY.get(energia)}</div>
-        <div className="acoes">
-        <button onClick={toHeal}>Ganhar energia</button>
+        <div className="atributos">
+        <Atributo icone="🍔"/>
         </div>
-        
+        </div>
+    
       </div>
     </div>
   );
