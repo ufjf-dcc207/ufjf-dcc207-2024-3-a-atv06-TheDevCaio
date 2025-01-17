@@ -42,3 +42,25 @@
     margin-left: 100px;
     margin-top: 0px;
 }
+
+.ciclo{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-weight: bold;
+    display: flex;
+    width: 80px;
+    height: 80px;
+    margin-left: 45%;
+    margin-top: 10%;
+    border-width: 5px;
+    border-style: solid;
+    background: #800000;
+    border-radius: 50px;
+
+    &&:hover{
+        background-color: #5e2129;
+    }
+
+}
